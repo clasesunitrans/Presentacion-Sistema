@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentación: Solución Computacional</title>
+    <style>
+        /* Basic Reset & Body Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            background-color: #2c3e50; /* Dark blue-grey */
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            flex-shrink: 0; /* Prevent it from shrinking */
+        }
+
+        .navbar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+        }
+
+        .navbar li {
+            margin: 0 15px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            white-space: nowrap; /* Keep menu items on one line */
+        }
+
+        .navbar a:hover,
+        .navbar a.active {
+            background-color: #3498db; /* Blue */
+        }
+
+        /* Main Content Area */
+        .content {
+            flex-grow: 1; /* Allow it to take available space */
+            padding: 40px;
+            max-width: 1200px;
+            margin: 30px auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Slide Titles */
+        h1, h2 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 40px;
+            font-size: 1.8em;
+        }
+
+        h3 {
+            color: #3498db;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+
+        /* General Text & Lists */
+        p {
+            line-height: 1.7;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        ul {
+            list-style: disc;
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        ul li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        /* Specific styles for different sections */
+        .centered-text {
+            text-align: center;
+        }
+
+        .image-placeholder {
+            background-color: #ecf0f1;
+            border: 1px dashed #bdc3c7;
+            padding: 50px;
+            text-align: center;
+            color: #7f8c8d;
+            margin: 30px auto;
+            font-style: italic;
+            border-radius: 5px;
+            max-width: 80%;
+            height: 200px; /* Example height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .code-example {
+            background-color: #eee;
+            border-left: 5px solid #3498db;
+            padding: 15px;
+            margin: 20px 0;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 0.9em;
+            overflow-x: auto;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 30px;
+            box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+            flex-shrink: 0; /* Prevent it from shrinking */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar ul {
+                flex-direction: column;
+            }
+            .navbar li {
+                margin: 5px 0;
+            }
+            .content {
+                padding: 20px;
+                margin: 15px auto;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+            h3 {
+                font-size: 1.2em;
+            }
+            p, ul li {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="#intro" class="nav-link active">Introducción</a></li>
+            <li><a href="#origin" class="nav-link">Origen</a></li>
+            <li><a href="#analysis" class="nav-link">Análisis</a></li>
+            <li><a href="#roles" class="nav-link">Roles</a></li>
+            <li><a href="#modules" class="nav-link">Módulos</a></li>
+            <li><a href="#architecture" class="nav-link">Arquitectura</a></li>
+            <li><a href="#tech" class="nav-link">Tecnología</a></li>
+            <li><a href="#implementation" class="nav-link">Implementación</a></li>
+            <li><a href="#demo" class="nav-link">Demo</a></li>
+            <li><a href="#conclusion" class="nav-link">Conclusión</a></li>
+        </ul>
+    </nav>
+
+    <main id="app-content" class="content">
+        <h1 class="centered-text">Cargando Presentación...</h1>
+        <p class="centered-text">Por favor, espera.</p>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 [Felipe Martínez] - Presentación de Solución Computacional</p>
+    </footer>
+
+    <script>
+        // Define content for each slide
+        const slides = {
+            intro: `
+                <h1 class="centered-text">Presentación de solución Computacional para [Proceso o Área Clave]</h1>
+                <h2 class="centered-text">Automatización y Mejora de [Proceso Opcional]</h2>
+                <p class="centered-text"><strong>[Felipe Martínez]</strong></p>
+                <p class="centered-text"><strong>[12-junio-2025]</strong></p>
+                <div class="centered-text">
+                    <img src="https://via.placeholder.com/150x80?text=Logo" alt="Logo de la Organización" style="margin-top: 20px; border-radius: 5px;">
+                </div>
+                <hr>
+                <h2 class="centered-text">Introducción y Agenda</h2>
+                <p>Es un honor presentarles nuestra solución computacional diseñada para optimizar y transformar el [mencionar brevemente el área o proceso].</p>
+                <p>Nuestro propósito es brindar una visión completa del ciclo de vida de esta aplicación: desde la identificación de la necesidad inicial, pasando por su desarrollo, hasta su implementación y perspectivas futuras.</p>
+                <h3>Agenda (Puntos Clave a Cubrir):</h3>
+                <ul>
+                    <li>Origen de la Necesidad y Objetivos Estratégicos</li>
+                    <li>Proceso de Análisis y Levantamiento de Información</li>
+                    <li>Usuarios, Roles y Flujos de Interacción</li>
+                    <li>Componentes Funcionales (Módulos) de la Solución</li>
+                    <li>Arquitectura Técnica y Modelo de Datos</li>
+                    <li>Tecnologías, Metodologías y Desarrollo</li>
+                    <li>Estrategia de Implementación y Mantenimiento</li>
+                    <li>Demostración (Opcional)</li>
+                    <li>Conclusiones, Impacto y Próximos Pasos</li>
+                    <li>Preguntas y Respuestas</li>
+                </ul>
+            `,
+            origin: `
+                <h1>Origen de la Necesidad y Objetivos Estratégicos</h1>
+                <h3>Contexto Organizacional o Empresarial:</h3>
+                <p>El escenario actual del proceso de <strong>[Nombre del Proceso]</strong> presentaba desafíos significativos que impactaban nuestra eficiencia operativa y toma de decisiones.</p>
+                <ul>
+                    <li><strong>Problemas o Puntos de Dolor Identificados:</strong>
+                        <ul>
+                            <li><strong>Ineficiencias operativas:</strong> Manejo manual de datos que resultaba en errores frecuentes y duplicidad de información.</li>
+                            <li><strong>Falta de visibilidad:</strong> Dificultad para obtener una vista consolidada y en tiempo real del estado de [ej: inventario, proyectos, clientes].</li>
+                            <li><strong>Altos costos:</strong> Recursos excesivos dedicados a tareas repetitivas y administrativas.</li>
+                            <li><strong>Riesgos:</strong> Problemas de seguridad o cumplimiento debido a la falta de un control centralizado.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Oportunidades de Mejora:</strong> Identificamos la oportunidad de transformar estos desafíos en ventajas competitivas a través de la digitalización y automatización.</li>
+                </ul>
+                <h3>Visión y Objetivos de la Solución:</h3>
+                <p>Nuestra visión es [ej: crear una plataforma robusta y escalable] que permita la optimización de [Nombre del Proceso].</p>
+                <ul>
+                    <li><strong>Objetivos Estratégicos Clave:</strong>
+                        <ul>
+                            <li><strong>Reducir</strong> los tiempos de [ej: procesamiento, respuesta] en un **X%**.</li>
+                            <li><strong>Aumentar</strong> la precisión de los datos y **disminuir** los errores en un **Y%**.</li>
+                            <li><strong>Automatizar</strong> tareas repetitivas para liberar recursos y enfocarlos en actividades de mayor valor.</li>
+                            <li><strong>Mejorar</strong> la **toma de decisiones** mediante acceso a información oportuna y precisa.</li>
+                            <li><strong>Potenciar la competitividad</strong> de la organización en el mercado.</li>
+                        </ul>
+                    </li>
+                    <li>Esta solución se alinea directamente con la estrategia de **[ej: eficiencia operativa/innovación/transformación digital]** de nuestra organización.</li>
+                </ul>
+            `,
+            analysis: `
+                <h1>Proceso de Análisis y Levantamiento de Información</h1>
+                <h3>Metodologías y Técnicas de Recolección de Requisitos:</h3>
+                <p>Para asegurar una comprensión profunda de las necesidades, empleamos un enfoque mixto y colaborativo:</p>
+                <ul>
+                    <li><strong>Entrevistas:</strong> Realizamos entrevistas a usuarios finales, gerentes de área y expertos en el proceso para capturar sus expectativas y desafíos.</li>
+                    <li><strong>Workshops y Talleres:</strong> Sesiones interactivas para definir y priorizar funcionalidades, así como para modelar el flujo de trabajo deseado.</li>
+                    <li><strong>Análisis de Documentos Existentes:</strong> Revisión de manuales, reportes, hojas de cálculo y sistemas actuales para entender el "as-is" (como está).</li>
+                    <li><strong>Observación de Procesos:</strong> Seguimiento directo de las operaciones para identificar ineficiencias no documentadas.</li>
+                    <li><strong>Benchmarking:</strong> Investigación de soluciones similares en el mercado para identificar mejores prácticas.</li>
+                </ul>
+                <h3>Herramientas para el Modelado y la Documentación:</h3>
+                <p>La información recopilada fue estructurada y validada utilizando diversas herramientas:</p>
+                <ul>
+                    <li><strong>Diagramas de Flujo de Proceso (BPMN):</strong> Para mapear el proceso actual y el propuesto.</li>
+                    <li><strong>Casos de Uso / Historias de Usuario:</strong> Para describir las interacciones del usuario con el sistema y definir requisitos funcionales.</li>
+                    <li><strong>Maquetas (Mockups) y Prototipos:</strong> Para visualizar la interfaz de usuario y validar la experiencia con los stakeholders.</li>
+                    <li><strong>Especificaciones de Requisitos:</strong> Documentos detallados que capturan requisitos funcionales y no funcionales (rendimiento, seguridad, usabilidad).</li>
+                </ul>
+                <h3>Desafíos en la Fase de Análisis y Cómo se Manejaron:</h3>
+                <ul>
+                    <li><strong>Requisitos Cambiantes:</strong> Se implementó un proceso de gestión de cambios riguroso y comunicación constante con los stakeholders.</li>
+                    <li><strong>Información Dispersa:</strong> Se realizó un esfuerzo de consolidación y validación cruzada con múltiples fuentes.</li>
+                    <li><strong>Resistencia al Cambio:</strong> Se involucró a los usuarios clave desde etapas tempranas para fomentar la apropiación de la solución.</li>
+                </ul>
+            `,
+            roles: `
+                <h1>Usuarios, Roles y Flujos de Interacción</h1>
+                <h3>Identificación de los Usuarios Clave:</h3>
+                <p>La aplicación está diseñada para ser utilizada por diversos perfiles dentro y, potencialmente, fuera de la organización:</p>
+                <ul>
+                    <li><strong>Administrador del Sistema:</strong> Encargado de la configuración general, gestión de usuarios y roles, y auditoría.</li>
+                    <li><strong>Supervisor de [Proceso Específico]:</strong> Monitoreo del progreso, aprobación de transacciones, acceso a reportes gerenciales.</li>
+                    <li><strong>Operador de [Proceso Específico]:</strong> Ejecución de las tareas diarias, ingreso de datos, actualización de estados.</li>
+                    <li><strong>Consultor / Analista:</strong> Acceso a datos y reportes para fines de análisis y planificación.</li>
+                    <li><strong>(Opcional) Usuario Externo / Cliente / Proveedor:</strong> Interacción limitada para consultas o envío de información específica.</li>
+                </ul>
+                <h3>Definición de Roles y Permisos:</h3>
+                <p>Se ha implementado una robusta gestión de roles para asegurar la seguridad, la trazabilidad y la eficiencia operativa. Cada rol tiene permisos específicos:</p>
+                <ul>
+                    <li>El <strong>Administrador</strong> tiene acceso total a la configuración y gestión de usuarios.</li>
+                    <li>El <strong>Supervisor</strong> puede ver y aprobar acciones de los Operadores, pero no modificar configuraciones del sistema.</li>
+                    <li>El <strong>Operador</strong> solo puede realizar las acciones designadas para su proceso específico, sin acceso a información sensible o de configuración.</li>
+                </ul>
+                <h3>Flujo de Trabajo del Proceso con la Aplicación:</h3>
+                <div class="image-placeholder">
+                    [Diagrama de Flujo de Trabajo del Proceso con la Aplicación - Aquí puedes insertar una imagen]
+                    <br>
+                    <em>(Ejemplo: Usuario inicia solicitud -> Sistema valida -> Supervisor aprueba -> Operador ejecuta -> Sistema notifica)</em>
+                </div>
+                <p>Este diagrama visual muestra cómo los diferentes roles interactúan con la aplicación para completar el proceso de **[Nombre del Proceso]**, desde el inicio hasta la finalización, destacando los puntos de decisión y las transferencias de información.</p>
+                <h3>Beneficios de una Gestión de Roles Clara:</h3>
+                <ul>
+                    <li><strong>Seguridad:</strong> Limita el acceso a la información y funcionalidades sensibles.</li>
+                    <li><strong>Auditoría:</strong> Facilita el seguimiento de las acciones de cada usuario.</li>
+                    <li><strong>Eficiencia Operativa:</strong> Los usuarios tienen acceso directo solo a lo que necesitan, reduciendo la complejidad.</li>
+                    <li><strong>Asignación de Responsabilidades:</strong> Define claramente quién es responsable de cada parte del proceso.</li>
+                </ul>
+            `,
+            modules: `
+                <h1>Componentes Funcionales (Módulos) de la Solución</h1>
+                <h3>Visión General de la Solución:</h3>
+                <div class="image-placeholder">
+                    [Diagrama Lógico de Componentes/Módulos - Aquí puedes insertar una imagen]
+                    <br>
+                    <em>(Ejemplo: Gestión de Usuarios <-> Gestión de Datos Maestros <-> Procesos Transaccionales <-> Reportes)</em>
+                </div>
+                <p>La aplicación está estructurada en módulos interconectados, cada uno enfocado en una funcionalidad específica del proceso de negocio:</p>
+                <h3>Descripción Detallada de Cada Componente/Módulo Principal:</h3>
+                <ul>
+                    <li>
+                        <strong>Módulo de [Nombre del Módulo 1 - Ej: Gestión de Datos Maestros]:</strong>
+                        <ul>
+                            <li><strong>Funcionalidades Clave:</strong>
+                                <ul>
+                                    <li>Creación, edición y eliminación de [ej: productos, clientes, empleados, proyectos].</li>
+                                    <li>Definición de atributos y categorías relevantes.</li>
+                                    <li>Validación y estandarización de datos.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Beneficios Específicos:</strong> Asegura la consistencia y calidad de la información fundamental para toda la organización.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Módulo de [Nombre del Módulo 2 - Ej: Procesos Transaccionales]:</strong>
+                        <ul>
+                            <li><strong>Funcionalidades Clave:</strong>
+                                <ul>
+                                    <li>Registro de [ej: entradas/salidas de inventario, solicitudes de servicio, órdenes de compra].</li>
+                                    <li>Automatización de flujos de aprobación.</li>
+                                    <li>Generación de transacciones y documentos asociados.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Beneficios Específicos:</strong> Agiliza las operaciones diarias y reduce la intervención manual.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Módulo de [Nombre del Módulo 3 - Ej: Reportes y Analíticas]:</strong>
+                        <ul>
+                            <li><strong>Funcionalidades Clave:</strong>
+                                <ul>
+                                    <li>Generación de informes personalizados sobre [ej: rendimiento, estado, tendencias].</li>
+                                    <li>Dashboards interactivos con KPIs clave del proceso.</li>
+                                    <li>Capacidad de exportación de datos para análisis externos.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Beneficios Específicos:</strong> Facilita la toma de decisiones informada y el monitoreo del rendimiento del proceso.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Módulo de Administración y Configuración:</strong>
+                        <ul>
+                            <li><strong>Funcionalidades Clave:</strong>
+                                <ul>
+                                    <li>Gestión de usuarios y asignación de roles y permisos.</li>
+                                    <li>Configuración de parámetros del sistema y reglas de negocio.</li>
+                                    <li>Módulo de auditoría para seguimiento de actividades.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Beneficios Específicos:</strong> Proporciona control total sobre la aplicación y asegura la adherencia a las políticas internas.</li>
+                        </ul>
+                    </li>
+                </ul>
+            `,
+            architecture: `
+                <h1>Arquitectura Técnica y Modelo de Datos</h1>
+                <h3>Arquitectura de la Solución:</h3>
+                <div class="image-placeholder">
+                    [Diagrama de Arquitectura de Alto Nivel - Aquí puedes insertar una imagen]
+                    <br>
+                    <em>(Ejemplo: Frontend (Web/Móvil) <-> API Gateway <-> Servicios de Negocio (Microservicios) <-> Base de Datos <-> Servicios Externos)</em>
+                </div>
+                <p>Nuestra solución se basa en una arquitectura **[ej: de microservicios / de n-capas / cliente-servidor]** que busca la **modularidad, escalabilidad y mantenibilidad**.</p>
+                <ul>
+                    <li><strong>Capa de Presentación (Frontend):</strong> Interfaz de usuario (web o móvil) que interactúa con el usuario final.</li>
+                    <li><strong>Capa de Lógica de Negocio (Backend):</strong> Contiene la lógica central de la aplicación, procesamiento de datos y reglas de negocio.</li>
+                    <li><strong>Capa de Datos:</strong> Almacena y gestiona la información de manera persistente.</li>
+                    <li><strong>Integraciones:</strong> Conexión con otros sistemas internos (ERP, CRM) o servicios externos (APIs de terceros).</li>
+                </ul>
+                <h3>Modelo de Datos (Esquema Simplificado):</h3>
+                <div class="image-placeholder">
+                    [Diagrama Entidad-Relación (Conceptual o Lógico Simplificado) - Aquí puedes insertar una imagen]
+                    <br>
+                    <em>(Ejemplo: Tablas de Entidades principales como 'Usuarios', 'Productos', 'Transacciones' y sus relaciones)</em>
+                </div>
+                <p>El modelo de datos relacional (o no-relacional, según el caso) está diseñado para garantizar la **integridad, consistencia y eficiencia** en el acceso a la información.</p>
+                <ul>
+                    <li><strong>Entidades Principales:</strong> Por ejemplo, las tablas clave para el proceso de [Nombre del Proceso] incluyen **[Entidad 1]**, **[Entidad 2]**, y **[Entidad 3]**.</li>
+                    <li>Sus **relaciones** garantizan que los datos estén conectados lógicamente y evitan redundancias.</li>
+                </ul>
+                <h3>Tecnología de Base de Datos y Justificación:</h3>
+                <p>Hemos seleccionado **[Nombre del SGBD, ej: PostgreSQL, MySQL, MongoDB, SQL Server]** como nuestro sistema gestor de base de datos.</p>
+                <ul>
+                    <li><strong>Justificación:</strong>
+                        <ul>
+                            <li>**[Ej: PostgreSQL]:** Conocido por su robustez, soporte de ACID (Atomicidad, Consistencia, Aislamiento, Durabilidad), y capacidad de manejar grandes volúmenes de datos.</li>
+                            <li>**[Ej: MongoDB]:** Elegido por su flexibilidad para esquemas de datos cambiantes (NoSQL) y alta escalabilidad para datos no estructurados.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <h3>Consideraciones de Seguridad, Consistencia e Integridad de Datos:</h3>
+                <ul>
+                    <li>Implementación de políticas de **seguridad a nivel de base de datos** (encriptación, control de acceso).</li>
+                    <li>Uso de **transacciones** para asegurar la consistencia en operaciones críticas.</li>
+                    <li>Mecanismos de **respaldo y recuperación** de datos para prevenir pérdidas.</li>
+                </ul>
+            `,
+            tech: `
+                <h1>Tecnologías, Metodologías y Desarrollo</h1>
+                <h3>Stack Tecnológico Principal:</h3>
+                <p>La construcción de nuestra solución se apoya en un conjunto de tecnologías modernas y robustas:</p>
+                <ul>
+                    <li><strong>Lenguajes de Programación:</strong>
+                        <ul>
+                            <li><strong>Backend:</strong> [Ej: Python, Node.js, Java, C#, Go] por su eficiencia y vasto ecosistema.</li>
+                            <li><strong>Frontend:</strong> [Ej: JavaScript] para la interactividad de la interfaz de usuario.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Frameworks y Librerías:</strong>
+                        <ul>
+                            <li><strong>Backend Framework:</strong> [Ej: Django/Flask (Python), Express.js (Node.js), Spring Boot (Java), ASP.NET Core (C#)] para el desarrollo rápido y estructurado de APIs.</li>
+                            <li><strong>Frontend Framework/Librería:</strong> [Ej: React, Angular, Vue.js] para construir interfaces de usuario dinámicas y reactivas.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Base de Datos:</strong> [Mencionar SGBD ya explicado].</li>
+                    <li><strong>Otras Herramientas/Servicios:</strong>
+                        <ul>
+                            <li><strong>Contenedores:</strong> [Ej: Docker] para encapsular la aplicación y sus dependencias.</li>
+                            <li><strong>Orquestación:</strong> [Ej: Kubernetes] para la gestión y escalabilidad de los contenedores en producción.</li>
+                            <li><strong>Servicios Cloud:</strong> [Ej: AWS, Azure, Google Cloud] para infraestructura, bases de datos y otros servicios gestionados.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <h3>Metodología de Desarrollo Aplicada:</h3>
+                <p>Adoptamos una metodología **[Ej: Ágil (Scrum/Kanban) / Cascada / Lean]** para el desarrollo del proyecto.</p>
+                <ul>
+                    <li><strong>Enfoque Ágil (Scrum):</strong> Permitió ciclos cortos de desarrollo (Sprints), entregas incrementales, retroalimentación constante y adaptación a los cambios.</li>
+                    <li><strong>Control de Versiones:</strong> Utilizamos [Ej: Git] en conjunto con [Ej: GitHub/GitLab/Bitbucket] para la colaboración del equipo, seguimiento de cambios y gestión de ramas.</li>
+                </ul>
+                <h3>Estrategia de Pruebas y Aseguramiento de la Calidad:</h3>
+                <p>Para garantizar la robustez y fiabilidad de la solución, implementamos una estrategia de pruebas integral:</p>
+                <ul>
+                    <li><strong>Pruebas Unitarias:</strong> Para validar el correcto funcionamiento de componentes individuales.</li>
+                    <li><strong>Pruebas de Integración:</strong> Para asegurar la correcta comunicación entre los diferentes módulos y servicios.</li>
+                    <li><strong>Pruebas Funcionales:</strong> Para verificar que la aplicación cumple con los requisitos de negocio especificados.</li>
+                    <li><strong>Pruebas de Aceptación de Usuario (UAT):</strong> Realizadas por los usuarios finales para validar que la solución satisface sus necesidades operativas.</li>
+                    <li><strong>Pruebas de Rendimiento y Carga:</strong> Para evaluar el comportamiento del sistema bajo diferentes volúmenes de usuarios y datos.</li>
+                    <li><strong>Pruebas de Seguridad:</strong> Para identificar y corregir vulnerabilidades.</li>
+                </ul>
+            `,
+            implementation: `
+                <h1>Estrategia de Implementación y Mantenimiento</h1>
+                <h3>Plan de Despliegue (Rollout):</h3>
+                <p>La implementación de la solución se ha planificado cuidadosamente para minimizar interrupciones y asegurar una transición fluida.</p>
+                <ul>
+                    <li><strong>Estrategia:</strong> [Ej: Despliegue por fases (Piloto -> Departamentos -> Toda la organización) / Big Bang (implementación simultánea)].</li>
+                    <li><strong>Infraestructura:</strong> La aplicación será desplegada en [Ej: Servidores On-Premise / Cloud (AWS, Azure, Google Cloud)] aprovechando sus capacidades de escalabilidad y alta disponibilidad.</li>
+                    <li><strong>Ambientes:</strong> Contamos con ambientes de Desarrollo, Pruebas, Pre-producción y Producción.</li>
+                </ul>
+                <h3>Plan de Migración de Datos (si aplica):</h3>
+                <p>En caso de existir datos históricos, se ha diseñado un plan de migración:</p>
+                <ul>
+                    <li><strong>Método:</strong> [Ej: Scripts automatizados de ETL (Extract, Transform, Load) / Carga manual controlada para datos pequeños / Enfoque híbrido].</li>
+                    <li><strong>Validación:</strong> Se realizará una validación exhaustiva de los datos migrados para asegurar su integridad y consistencia.</li>
+                </ul>
+                <h3>Capacitación y Gestión del Cambio para Usuarios:</h3>
+                <p>La adopción de la nueva solución es clave para el éxito del proyecto.</p>
+                <ul>
+                    <li><strong>Sesiones de Entrenamiento:</strong> Se impartirán talleres y capacitaciones presenciales/virtuales adaptadas a cada rol de usuario.</li>
+                    <li><strong>Materiales de Apoyo:</strong> Se proporcionarán manuales de usuario detallados, guías rápidas y videos tutoriales.</li>
+                    <li><strong>Comunidad de Usuarios:</strong> Fomento de un espacio para preguntas y mejores prácticas.</li>
+                    <li><strong>Estrategia de Comunicación:</strong> Comunicación proactiva sobre los beneficios y la evolución de la aplicación.</li>
+                </ul>
+                <h3>Soporte Post-Implementación y Mantenimiento:</h3>
+                <p>Garantizar la continuidad operativa y la evolución de la solución es fundamental.</p>
+                <ul>
+                    <li><strong>Soporte Técnico:</strong> Establecimiento de un equipo de soporte (interno o externo) con canales de comunicación claros (mesa de ayuda, tickets).</li>
+                    <li><strong>Gestión de Incidentes:</strong> Proceso definido para la clasificación, resolución y escalamiento de problemas.</li>
+                    <li><strong>Mantenimiento Evolutivo:</strong> Planificación de futuras actualizaciones, nuevas funcionalidades y mejoras basadas en la retroalimentación de los usuarios y las necesidades del negocio.</li>
+                    <li><strong>Monitoreo:</strong> Implementación de herramientas de monitoreo de rendimiento y logs para detectar problemas proactivamente.</li>
+                </ul>
+                <h3>Consideraciones de Escalabilidad y Resiliencia:</h3>
+                <ul>
+                    <li>La arquitectura de la aplicación está diseñada para ser **escalable horizontalmente**, permitiendo añadir más recursos según el crecimiento de usuarios o volumen de transacciones.</li>
+                    <li>Se han implementado mecanismos de **balanceo de carga y failover** para asegurar la alta disponibilidad y resiliencia del sistema.</li>
+                </ul>
+            `,
+            demo: `
+                <h1>Demostración de la Aplicación</h1>
+                <p>A continuación, presentaremos una demostración en vivo de las funcionalidades clave de la aplicación.</p>
+                <h3>Puntos Clave a Demostrar:</h3>
+                <ul>
+                    <li><strong>Flujo de Trabajo Principal:</strong> Navegación a través del proceso más relevante que resuelve la aplicación (Ej: Desde la creación de un registro hasta su aprobación y finalización).</li>
+                    <li><strong>Interacción de Roles:</strong> Mostrar cómo diferentes usuarios con distintos roles interactúan con la misma funcionalidad (Ej: Un operador registra, un supervisor aprueba).</li>
+                    <li><strong>Ingreso y Consulta de Datos:</strong> Ejemplo práctico de cómo se ingresa nueva información y cómo se consulta o busca la información existente.</li>
+                    <li><strong>Reportes/Dashboards Clave:</strong> Presentación de las visualizaciones más importantes que ofrece la aplicación para la toma de decisiones.</li>
+                    <li><strong>Usabilidad:</strong> Destacar la interfaz de usuario intuitiva y la facilidad de uso.</li>
+                </ul>
+                <div class="centered-text image-placeholder" style="height: 300px;">
+                    [Espacio para la DEMO EN VIVO / Capturas de Pantalla Clave]
+                    <br>
+                    <em>(Prepare su ambiente de demo con datos de ejemplo y recorra un flujo predefinido. No olvide tener un plan B si algo falla.)</em>
+                </div>
+                <p><strong>Nota:</strong> Esta sección es interactiva. Prepárese para mostrar la aplicación en tiempo real. Mantenga la demostración enfocada y concisa.</p>
+            `,
+            conclusion: `
+                <h1>Conclusiones, Impacto y Próximos Pasos</h1>
+                <h3>Resumen de los Beneficios Clave Alcanzados:</h3>
+                <p>Nuestra solución no es solo una aplicación, es una **plataforma transformadora** que ha logrado:</p>
+                <ul>
+                    <li>**Automatizar [X] tareas**, liberando tiempo para actividades estratégicas.</li>
+                    <li>**Reducir los errores en [Y]%**, aumentando la fiabilidad de los datos.</li>
+                    <li>**Mejorar la visibilidad de [Z]**, permitiendo una toma de decisiones más rápida y precisa.</li>
+                    <li>**Optimizar los recursos** al eliminar procesos manuales y redundantes.</li>
+                    <li>**Aumentar la satisfacción de los usuarios** al proporcionar una herramienta eficiente y fácil de usar.</li>
+                </ul>
+                <p>Hemos superado los problemas iniciales de [mencionar problema principal] y alcanzado nuestros objetivos estratégicos de [mencionar objetivo principal].</p>
+                <h3>Desafíos Superados y Lecciones Aprendidas:</h3>
+                <ul>
+                    <li><strong>Superamos</strong> desafíos técnicos como [ej: integración con sistemas legados] y desafíos de proceso como [ej: resistencia al cambio].</li>
+                    <li><strong>Aprendimos</strong> la importancia de la comunicación continua con los stakeholders y la flexibilidad en el desarrollo.</li>
+                    <li>Esta experiencia nos ha fortalecido y nos permite enfrentar futuros proyectos con mayor conocimiento.</li>
+                </ul>
+                <h3>Oportunidades Futuras y Roadmap de la Solución:</h3>
+                <p>Esta es solo la primera fase. Tenemos una visión a largo plazo para esta solución:</p>
+                <ul>
+                    <li><strong>Integraciones Adicionales:</strong> Con sistemas como [ej: ERP, CRM, sistemas de pago] para una experiencia de usuario más unificada.</li>
+                    <li><strong>Nuevas Funcionalidades:</strong> Implementación de [ej: módulo de pronóstico, análisis predictivo, soporte móvil nativo].</li>
+                    <li><strong>Aplicación de Tecnologías Emergentes:</strong> Explorar el uso de [ej: Inteligencia Artificial para análisis de patrones, Machine Learning para optimización, Blockchain para trazabilidad].</li>
+                    <li><strong>Optimización Continua:</strong> Mejoras de rendimiento y escalabilidad basadas en el crecimiento de la demanda.</li>
+                </ul>
+                <p>Creemos firmemente que esta solución continuará generando valor significativo para la organización.</p>
+                <hr>
+                <h2 class="centered-text">Preguntas y Respuestas</h2>
+                <p class="centered-text">Agradecemos sinceramente su tiempo y atención. Estamos a su disposición para responder cualquier pregunta que puedan tener.</p>
+            `,
+            contact: `
+                <h1>¡Gracias!</h1>
+                <h2 class="centered-text">¿Preguntas?</h2>
+                <div class="centered-text" style="margin-top: 50px;">
+                    <p><strong>[Felipe Martínez]</strong></p>
+                    <p><strong>Correo Electrónico:</strong> tu.correo@ejemplo.com</p>
+                    <p><strong>Teléfono:</strong> +XX XXX XXX XXXX</p>
+                    <p><strong>LinkedIn:</strong> linkedin.com/in/tunombre</p>
+                    <img src="https://via.placeholder.com/100x100?text=QR" alt="Código QR de Contacto" style="margin-top: 30px; border-radius: 5px;">
+                </div>
+                <p class="centered-text" style="margin-top: 40px;"><em>"La innovación es la clave para el crecimiento y la eficiencia en el mundo empresarial."</em></p>
+            `
+        };
+
+        const appContent = document.getElementById('app-content');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        // Function to load content based on hash
+        function loadContent() {
+            let hash = window.location.hash.substring(1); // Get hash without '#'
+            if (!hash || !slides[hash]) {
+                hash = 'intro'; // Default to intro slide if no hash or invalid
+                window.location.hash = '#intro'; // Set hash for consistency
+            }
+
+            appContent.innerHTML = slides[hash];
+
+            // Update active state in navbar
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + hash) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        // Event listener for hash changes
+        window.addEventListener('hashchange', loadContent);
+
+        // Event listener for initial load
+        document.addEventListener('DOMContentLoaded', loadContent);
+
+        // Add click listeners to nav links for smoother experience
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault(); // Prevent default link behavior
+                const targetHash = link.getAttribute('href');
+                window.location.hash = targetHash; // Update hash and trigger loadContent
+            });
+        });
+    </script>
+</body>
+</html>
